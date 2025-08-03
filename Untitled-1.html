@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rani Rai - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <style>
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --text: #ffffff;
+      --light-bg: #f8f9fa;
+      --dark-bg: #0f0f2f;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: var(--light-bg);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.dark {
+      background: var(--dark-bg);
+      color: var(--text);
+    }
+
+    header {
+      background-color: var(--primary);
+      color: var(--text);
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .dark-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: 2px solid #fff;
+      color: white;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 20px;
+    }
+
+    nav {
+      background: var(--secondary);
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 10px 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00c9ff;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h2 {
+      color: var(--primary);
+    }
+
+    body.dark h2 {
+      color: #00c9ff;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+
+    body.dark .card {
+      background: #1c1c3c;
+      color: white;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #0077cc;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact-form button {
+      background: var(--primary);
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    @media screen and (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rani Rai</h1>
+    <p>Web Developer | AI Enthusiast | Anime Lover</p>
+    <button class="dark-toggle" onclick="toggleDark()">Toggle Dark Mode</button>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! My Name is Rani Rai and I am currently pursuing Diploma in Computer Science. I am a passionate learner in web development and technology. I enjoy building creative and functional websites while exploring new ideas. I aim to create meaningful digital experiences and constantly learn from real-world projects.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>Python (Basic)</li>
+      <li>Communication & Teamwork</li>
+    </ul>
+
+    <h2>Interests</h2>
+    <ul>
+      <li>Web Design</li>
+      <li>Artificial Intelligence</li>
+      <li>Anime & Video Editing</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Personal Portfolio Website</h3>
+        <p>Created using HTML to showcase my skills and work.</p>
+        <a href="https://github.com/r4nie3/portfolio" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+      <div class="card">
+        <h3>Basic Calculator</h3>
+        <p>A simple calculator built using HTML and JavaScript.</p>
+        <a href="https://github.com/r4nie3/calculator" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+      
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p>Email: ranirai2007@gmail.com</p>
+    <p>GitHub: <a href="https://github.com/r4nie3" target="_blank">github.com/r4nie3</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Rani Rai | All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://github.com/r4nie3" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:ranirai2007@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleDark() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+</body>
+</html>
